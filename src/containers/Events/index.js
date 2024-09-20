@@ -30,7 +30,7 @@ const EventList = () => {
     setType(evtType);
   };
 
-  const pageNumber = Math.ceil((data?.events?.length || 0) / PER_PAGE);
+  const pageNumber = Math.floor((filteredEvents?.length || 0) / PER_PAGE) + 1;
   const typeList = useMemo(() => {
     if (!data?.events) return new Set();
     return new Set(data.events.map((event) => event.type));
