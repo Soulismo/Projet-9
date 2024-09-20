@@ -35,7 +35,7 @@ const Slider = () => {
   }
 
   return (
-    <div className="SlideCardList" style={{ overflowX: "hidden" }}>
+    <div className="SlideCardList" style={{ overflow: "hidden" }}>
       {byDateDesc.map((event, idx) => (
         <div key={`slide-${event.id || idx}`}>
           <div
